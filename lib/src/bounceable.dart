@@ -105,6 +105,7 @@ class _BounceableState extends State<Bounceable>
   Widget build(BuildContext context) {
     return MouseRegion(
       cursor: SystemMouseCursors.click,
+      hitTestBehavior: widget.hitTestBehavior,
       child: GestureDetector(
         behavior: widget.hitTestBehavior,
         onTapCancel: widget.onTap != null ? _onTapCancel : null,
